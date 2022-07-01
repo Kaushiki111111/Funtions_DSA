@@ -1,0 +1,72 @@
+The function erases a part of the string content, shortening the length of the string.
+// Driver code
+int main()
+{
+    string str("Hello World!");
+ 
+    cout << "Before erase() : ";  
+    cout << str << endl;  ->Hello World!
+    eraseDemo(str);  -> empty []
+ 
+    return 0;
+}
+
+
+
+Eg 1)
+void eraseDemo(string str)
+{
+    // Deletes all characters
+    str.erase();
+ 
+    cout << "After erase() : ";   ->Before erase() : Hello World!
+                                    After erase() : 
+    cout << str;
+}
+ 
+
+
+Eg 2] 
+void eraseDemo(string str)
+{
+    // Deletes all characters except first one
+    str.erase(1);
+ 
+    cout << "After erase(idx) : ";
+    cout << str;
+}
+
+
+output:
+Before Erase:Hello World!
+After erase:H
+
+
+Eg 3]
+void eraseDemo(string str)
+{
+    // Deletes 4 characters from index number 1
+    str.erase(1, 4);
+ 
+    cout << "After erase : ";
+    cout << str;
+}
+
+Output:
+Before Erase:Hello World!
+After erase:H World!
+
+Eg 4]
+void eraseDemo(string str)
+{
+    // Deletes character at position 4
+    str.erase(str.begin() + 4);
+ 
+    cout << "After erase : ";
+    cout << str;
+}
+
+
+Output:
+Before Erase:Hello World!
+After erase:Hell World!
